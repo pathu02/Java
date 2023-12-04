@@ -1,0 +1,69 @@
+version: 1
+
+dn: dc=example,dc=com
+objectclass: domain
+objectclass: top
+dc: example
+
+dn: ou=people,dc=example,dc=com
+objectClass: organizationalUnit
+objectClass: top
+ou: people
+
+dn: ou=groups,dc=example,dc=com
+objectClass: organizationalUnit
+objectClass: top
+ou: groups
+
+
+dn: uid=tamil,ou=people,dc=example,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: Tamil
+sn: Selvan
+uid: tamil
+userPassword:: e1NTSEF9bkFCUUFXeHJBRjNUb25wblQzWDZjdm83U29GUnh2elQ4NXB2TlE9P
+
+dn: uid=ben,ou=people,dc=example,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: Ben
+sn: Stocks
+uid: ben
+userPassword:: e1NTSEF9R1RNZ1VKWTF0UjU3K0NDU3J0MkxDTy9ab3NQYUcvQk94QldQQ1E9P
+
+dn: uid=testuser,ou=people,dc=example,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: John
+sn: Joseph
+uid: testuser
+userPassword:: e1NTSEF9NDFQVGpjWkF1bFFtRlpGS1orWVpoY0s5L3R0ZVR4ZjlmUnZkaVE9P
+
+dn: cn=PUBLISHER,ou=groups,dc=example,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: PUBLISHER
+member: uid=testuser,ou=people,dc=example,dc=com
+
+dn: cn=EDITOR,ou=groups,dc=example,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: EDITOR
+member: uid=tamil,ou=people,dc=example,dc=com
+
+dn: cn=ADMIN,ou=groups,dc=example,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: ADMIN
+member: uid=ben,ou=people,dc=example,dc=com
+member: uid=tamil,ou=people,dc=example,dc=com
+
+
+
